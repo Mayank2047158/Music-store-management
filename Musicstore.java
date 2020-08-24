@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Musicstore{
+public class Musicstore {
 
  static String storename="XYZ";
 
@@ -54,7 +54,7 @@ public class Musicstore{
 				trackReleaseDate[i]=sc.nextInt();
 				
 				System.out.println("Enter Genre: ");
-				genre[i]=sc.nextInt();
+				genre[i]=sc.next();
 
 				System.out.println("Enter Artist Name: ");
 				artist[i]=sc.next();
