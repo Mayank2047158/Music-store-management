@@ -10,12 +10,12 @@ public class Musicstore{
 
 	 int trackId[];
 	 String trackTitle[];
-	 int trackLenght[];
+	 int trackLength[];
 	 int trackReleaseDate[];
-	 String Genre[];
-	 String Artist[];
+	 String genre[];
+	 String artist[];
 	 int trackQty[];
-	 int Price[];
+	 int price[];
 
        	 int num=0;
 	Scanner sc=new Scanner(System.in);
@@ -32,7 +32,7 @@ public class Musicstore{
 			
 			trackId = new int[num];
 	 		trackTitle = new String[num];
-	 		trackLenght = new int[num];
+	 		trackLength = new int[num];
 	 		trackReleaseDate = new int[num];
 	 		genre = new String[num];
 	 		artist = new String[num];
@@ -48,7 +48,7 @@ public class Musicstore{
 				trackTitle[i]=sc.next();
 
 				System.out.println("Enter Track Length: ");
-				trackLenght[i]=sc.nextInt();
+				trackLength[i]=sc.nextInt();
 
 				System.out.println("Enter Release Date: ");
 				trackReleaseDate[i]=sc.nextInt();
