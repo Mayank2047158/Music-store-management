@@ -40,10 +40,14 @@ public class Musicstore {
 	 		price = new int[num];
 
 			for(int i = 0;i < num; i++)
-			{
+			{	int curID=0;
 				System.out.println("Enter Track ID: ");
-				trackId[i]=sc.nextInt();
-
+				curID=sc.nextInt();
+			 if(trackID.includes(curID))
+			 	System.out.println("Duplicate value is present" curID);
+			 	else
+				trackID[i]=curID;
+			 
 				System.out.println("Enter Track Title: ");
 				trackTitle[i]=sc.next();
 
