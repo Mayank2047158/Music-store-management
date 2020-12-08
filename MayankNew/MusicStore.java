@@ -1,9 +1,9 @@
 package MayankNew;
 
 import java.util.*;
-import java.util.Scanner;
 
-class Person {
+abstract class Person {
+    //made the class abstract
     String name;
     int age;
     String address;
@@ -34,6 +34,9 @@ class Person {
         System.out.println("Age - " + this.age);
         System.out.println("Address - " + this.address);
     }
+
+    public abstract void tryAbstract();
+    //made the function abstract
 }
 
 class Employee extends Person {
@@ -55,18 +58,22 @@ class Employee extends Person {
         System.out.println("Department name - " + this.Department);
     }
 
+	@Override
+	public void tryAbstract() {
+		String string = "Mayank";
+	}
 }
 
 public class MusicStore {
     public static void main(String[] args) {
-        /*Metadata object1 = new Metadata();
+        Metadata object1 = new Metadata();
         System.out.println(object1);
 
         Metadata obj1 = new Metadata("Ragreza", 350, 2008, "Temp", "Arijit", 5, 150);
         obj1.printDetails();
         
         Customers c = new Customers();
-        c.printDetails();*/
+        c.printDetails();
     
         System.out.println("\n Now choose your option :");
         System.out.println("\n ------------------------ :");
@@ -78,43 +85,39 @@ public class MusicStore {
         int choice=a.nextInt();
         
         switch(choice)
-	{
-	
-	case 1:
-        
-        System.out.print("Enter Number of Employee: ");
-        Scanner ns = new Scanner(System.in);
-        int noe = Integer.parseInt(ns.nextLine());
-        Employee[] obj = new Employee[noe];
-        for (int i=0;i<noe;i++){
-            obj[i] = new Employee();
-            System.out.printf("- - - Enter %d Employee Details - - - \n",i+1);
-            obj[i].read();
-            obj[i].show();
-            }
-		break;
+	    {
+	        case 1:
+                System.out.print("Enter Number of Employee: ");
+                Scanner ns = new Scanner(System.in);
+                int noe = Integer.parseInt(ns.nextLine());
+                Employee[] obj = new Employee[noe];
+                for (int i=0;i<noe;i++){
+                    obj[i] = new Employee();
+                    System.out.printf("- - - Enter %d Employee Details - - - \n",i+1);
+                    obj[i].read();
+                    obj[i].show();
+                    }
+                break;
     
-    case 2:
-
-        System.out.println("\n Enter Number of Music CD :");
-        Scanner sc = new Scanner(System.in);
-        int number=sc.nextInt();
-        Metadata data[] = new Metadata[number];
-        Functionality f = new Functionality();
-        for(int i = 0 ; i < number ; i++){
-             data[i] = f.getInputMetadata(i);
+            case 2:
+                System.out.println("\n Enter Number of Music CD :");
+                Scanner sc = new Scanner(System.in);
+                int number=sc.nextInt();
+                Metadata data[] = new Metadata[number];
+                Functionality f = new Functionality();
+                for(int i = 0 ; i < number ; i++){
+                    data[i] = f.getInputMetadata(i);
+                }
+                System.out.println("--------------------");
+            
+                for(int i = 0 ; i < data.length ; i++){
+                    data[i].printDetails1(data.length - i);
+                }
+                break;
+    
+            default:
+		        throw new InputMismatchException("Please Input valid Inputs only");
         }
-        System.out.println("--------------------");
-    
-        for(int i = 0 ; i < data.length ; i++){
-            data[i].printDetails1(data.length - i);
-        }
-        break;
-    
-    default:
-		System.out.println("Wrong Choice!\n");
-			
-	}
 
         
         
@@ -127,11 +130,13 @@ public class MusicStore {
         {
            System.out.println("--Enter a valid choice--");
         }*/
+
     }
 
     //static block
     static
-    {
-        System.out.println("Welcome to Music Store");
+    {   
+        final String CompanyName = "BlackNirvana";
+        System.out.println("Welcome to Music Store >>>>> "+ CompanyName);
     }
 }

@@ -29,16 +29,22 @@ public class Functionality extends Metadata {
         sc.nextLine();
 
         System.out.println("Enter Price: ");
-        if(getPrice() == 0) {
-            
-            System.out.println("error");
+        object.setPrice(sc.nextInt());
+        sc.nextLine();
+        try {
+            if(object.getPrice() == 0) {
+                throw new ERRORammountException("ERROR");
+            }
+            else   
+            {
+                object.setPrice(sc.nextInt());
+                sc.nextLine();
+            }    
+        } catch (ERRORammountException e) {
+            System.out.println("Price cannot be zero");
+            e.printStackTrace();
         }
-        else   
-        {
-            object.setPrice(sc.nextInt());
-            sc.nextLine();
-            
-        }
+        
         return object;
     }
 }
