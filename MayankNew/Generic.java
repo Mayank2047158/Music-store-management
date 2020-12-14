@@ -1,4 +1,5 @@
-package MayankNew;
+package MayankNew;       //package defined
+
 
 import java.util.ArrayList;
 import java.util.Scanner;

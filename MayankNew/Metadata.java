@@ -1,15 +1,16 @@
-package MayankNew;
-public class Metadata implements Printing{
+package MayankNew;       //package defined
+
+public class Metadata implements Printing{ //Implementing Interface Class method in Metadata Class
     private static int trackID = 1;
     private String trackTitle;
-    private int trackLength;
+    private int trackLength;			//access specifers : private/public
     private int trackReleaseDate;
     private String genre;
-    private String artist;
+    private String artist;				// String variable
     private int trackQty;
-    private int price;
+    private int price;					//Interger variable
 
-	public int getTrackID() {
+	public int getTrackID() {	//Member Fuction
 		return trackID;
 	}
 	
@@ -17,7 +18,7 @@ public class Metadata implements Printing{
 		return trackTitle;
 	}
 	public void setTrackTitle(String trackTitle) {
-		this.trackTitle = trackTitle;
+		this.trackTitle = trackTitle;		// this keyword
 	}
 	public int getTrackLength() {
 		return trackLength;
@@ -56,14 +57,15 @@ public class Metadata implements Printing{
 		this.price = price;
 	}
 
-    public Metadata(){
+    public Metadata(){			//No Argumented Constructor
         ++Metadata.trackID;
         trackLength = trackReleaseDate = trackQty = price = 0;
         trackTitle = genre = artist = null;
     }
 
     public Metadata(String trackTitle, int trackLength, int trackReleaseDate, String genre, String artist, int trackQty, int price){
-        ++Metadata.trackID;
+					//Parameterized Constructor
+		++Metadata.trackID;
         this.trackTitle = trackTitle;
         this.trackLength = trackLength;
         this.trackReleaseDate = trackReleaseDate;
@@ -74,15 +76,15 @@ public class Metadata implements Printing{
 		}
     
 	@Override
-	public void printDetails() {
-		// TODO Auto-generated method stub
+	public void printDetails() {		//fucntion Overloading
+		// String Buffer
 		StringBuffer sb = new StringBuffer();
         sb.append(trackID).append("\t").append(trackTitle).append("\t").append(trackLength).append(trackReleaseDate).append("\t").append(genre).append("\t").append(artist).append("\t").append(trackQty).append("\t").append(price);
         System.out.println(sb.toString());
 	}
 
-	public void printDetails1(int i) {
-		// TODO Auto-generated method stub
+	public void printDetails1(int i) {		//fucntion Overloading
+		// String Buffer
 		StringBuffer sb = new StringBuffer();
         sb.append(trackID - i).append("\t").append(trackTitle).append("\t").append(trackLength).append(trackReleaseDate).append("\t").append(genre).append("\t").append(artist).append("\t").append(trackQty).append("\t").append(price);
         System.out.println(sb.toString());
