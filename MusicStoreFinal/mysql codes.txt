@@ -1,0 +1,29 @@
+create database music_store;
+
+use music_store;
+
+create table Login(
+Username varchar(34),
+Password varchar(35));
+
+
+Insert Into Login Values('Mayank','101');
+Insert Into Login Values('blacknirvana','1234');
+
+create table new_song(
+title varchar(89),
+artist varchar(45),
+year varchar(45),
+album varchar(34),
+genre varchar(56));
+
+insert into new_song values('Instant crush','Daft punk','2013','Single','Romance');
+
+create table old_song(
+title varchar(89),
+artist varchar(45),
+year varchar(45),
+album varchar(34),
+genre varchar(56));
+
+insert into old_song values('Everything I do I do it for you','Bryan Adams','2013','The best of me','Romance');
